@@ -1,5 +1,10 @@
-on: pull_request_target
-
+on:
+  pull_request_target:
+    types: [opened]
+  
+  workflow_dispatch:
+  
+  
 jobs:
   welcome:
     runs-on: ubuntu-latest
