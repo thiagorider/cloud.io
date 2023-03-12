@@ -1,9 +1,6 @@
 on:
   pull_request_target:
   
-  workflow_dispatch:
-  
-  
 jobs:
   welcome:
     runs-on: ubuntu-latest
@@ -11,11 +8,13 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            await github.rest.issues.createComment({
+              await github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `**Welcome**, ${context.payload.sender.login} !
-
-                Please make sure you're read our [contributing guide](CONTRIBUTING.md) and we look forward to reviewing your Pull request shortly ✨`
-            })
+                
+                Please make sure you're read our [contributing guide](CONTRIBUTING.md) and we look forward to reviewing your Pull request shortly ✨
+                
+                Thanks!`
+              })
