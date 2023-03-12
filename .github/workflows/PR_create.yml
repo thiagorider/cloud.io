@@ -1,5 +1,6 @@
 on:
   pull_request_target:
+    types: [create]
   
 jobs:
   welcome:
@@ -12,9 +13,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `**Welcome**, ${context.payload.sender.login} !
+              body: `**Thanks for your contribution**, ${context.payload.sender.login} !
                 
-                Please make sure you're read our [contributing guide](CONTRIBUTING.md) and we look forward to reviewing your Pull request shortly ✨
-                
-                Thanks!`
+                We look forward to reviewing your Pull request shortly ✨`
               })
