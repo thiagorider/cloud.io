@@ -1,0 +1,12 @@
+site_name: Cloud.io Bot
+theme:
+  name: mkdocs
+  locale: en
+  highlightjs: true
+
+nav:
+  - Home: index.md
+  - Install: INSTALL.md
+  - Development: DEVELOPMENT.md
+  - Contributing: CONTRIBUTING.md
+  - Code of Conduct: ../CODE_OF_CONDUCT.md
